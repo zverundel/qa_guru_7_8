@@ -70,6 +70,10 @@ class TestCart:
         cart.remove_product(product, 5)
         assert cart.products == {product: 5}
 
+    def test_remove_product_all(self, product, cart):
+        cart.add_product(product, 10)
+        cart.remove_product(product, 10)
+
     def test_clear(self, cart, product):
         cart.add_product(product, 10)
         cart.clear()
