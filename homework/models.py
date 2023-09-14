@@ -70,7 +70,7 @@ class Cart:
         if product in self.products:
             if remove_count is None:
                 self.products.pop(product)
-            elif remove_count > self.products[product]:
+            elif remove_count >= self.products[product]:
                 self.products.pop(product)
             else:
                 self.products[product] -= remove_count
